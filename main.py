@@ -12,7 +12,7 @@ from marko.ext.gfm import gfm as marko
 MD_HEAD = """**<p align="center">[Leo1226's Blog]()</p>**
 ====
 
-**<p align="center">随便写写</p>**
+**<p align="center">随便写写吧</p>**
 
 BACKUP_DIR = "backup"
 ANCHOR_NUMBER = 5
