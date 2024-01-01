@@ -13,7 +13,7 @@ MD_HEAD = """**<p align="center">[Leo1226's Blog]()</p>**
 ====
 
 **<p align="center">随便写写吧</p>**
-
+"""
 BACKUP_DIR = "backup"
 ANCHOR_NUMBER = 5
 TOP_ISSUES_LABELS = ["Top"]
