@@ -36,12 +36,13 @@ jobs:
       - name: Generate new md
         run: |
           source venv/bin/activate
-          python main.py ${{ secrets.G_T }} ${{ github.repository }} --issue_number '${{ github.event.issue.number }}'
+          python main.py ${{ secrets.GITHUB_TOKEN }} ${{ github.repository }} --issue_number '${{ github.event.issue.number }}'
 
       - name: Push README
         run: |
           git config --local user.email "action@github.com"
           git config --local user.name "GitHub Action"
           git add backup/*.md
+          git add source/_posts/*.md
           git commit -a -m 'update new blog' || echo "nothing to commit"
           git push || echo "nothing to push"
