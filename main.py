@@ -16,7 +16,7 @@ MD_HEAD = """**<p align="center">[Leo1226's Blog]()</p>**
 """
 
 #直接备份到hexo博客目录
-BACKUP_DIR = "source"
+BACKUP_DIR = "source/_posts"
 #POSTS_DIR = "source/_posts"
 ANCHOR_NUMBER = 5
 TOP_ISSUES_LABELS = ["Top"]
@@ -254,7 +254,7 @@ def save_issue(issue, me, dir_name=BACKUP_DIR):
 
 if __name__ == "__main__":
     if not os.path.exists(BACKUP_DIR):
-        os.mkdir(BACKUP_DIR)
+        os.makedirs(BACKUP_DIR)
     parser = argparse.ArgumentParser()
     parser.add_argument("github_token", help="github_token")
     parser.add_argument("repo_name", help="repo_name")
