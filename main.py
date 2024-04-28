@@ -14,7 +14,10 @@ MD_HEAD = """**<p align="center">[Leo1226's Blog]()</p>**
 
 **<p align="center">随便写写吧</p>**
 """
-BACKUP_DIR = "backup"
+
+#直接备份到hexo博客目录
+BACKUP_DIR = "source/_posts"
+#POSTS_DIR = "source/_posts"
 ANCHOR_NUMBER = 5
 TOP_ISSUES_LABELS = ["Top"]
 TODO_ISSUES_LABELS = ["TODO"]
