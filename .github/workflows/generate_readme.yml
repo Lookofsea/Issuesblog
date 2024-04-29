@@ -39,9 +39,10 @@ jobs:
           python main.py ${{ secrets.G_T }} ${{ github.repository }} --issue_number '${{ github.event.issue.number }}'
 
       - name: Push README
+      - env: 
+          GH_TOKEN: ${{ secrets.G_T }}
         run: |
-          git config --local user.email "action@github.com"
-          git config --local user.name "GitHub Action"
+        
           git add backup/*.md
           git add source/_posts/*.md
           git commit -a -m 'update new blog' || echo "nothing to commit"
